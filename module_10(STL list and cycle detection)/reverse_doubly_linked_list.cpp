@@ -46,7 +46,10 @@ void reverse_doubly(Node *head, Node *tail)
     while (true)
     {
         if (i == j || i->next == j)
+        {
+            swap(i->val, j->val);
             break;
+        }
         swap(i->val, j->val);
         i = i->next;
         j = j->pre;
